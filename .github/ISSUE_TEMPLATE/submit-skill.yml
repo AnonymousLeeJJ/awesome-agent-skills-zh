@@ -1,0 +1,73 @@
+name: 收录申请 / Skill Submission
+description: 推荐一个 Agent Skill、技能合集或规范资源
+title: "[收录申请] "
+labels: ["submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 名称
+      placeholder: 例如 Skill Creator
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 公开链接
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 建议分类
+      options:
+        - 文档处理
+        - 开发工程
+        - 设计创意
+        - 写作沟通
+        - 技能开发
+        - 研究规划
+        - 合集索引
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: 来源类型
+      options:
+        - 官方
+        - 社区
+        - 索引
+        - 原创
+    validations:
+      required: true
+  - type: input
+    id: install
+    attributes:
+      label: 安装方式
+      placeholder: 例如 npx skills add owner/repo，或复制到 skills 目录
+  - type: textarea
+    id: description
+    attributes:
+      label: 一句话说明
+      description: 请说明它解决什么问题，避免空泛宣传
+      placeholder: 这个 Skill 可以……
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: 权限与安全说明
+      description: 是否包含脚本、网络请求、文件写入、密钥或其他高权限操作？
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我确认链接公开可访问
+          required: true
+        - label: 我确认描述没有夸大，并愿意接受维护者调整分类
+          required: true
+        - label: 如果这是自荐项目，我会在评论中主动说明关系
+          required: true

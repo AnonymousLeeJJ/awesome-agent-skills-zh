@@ -2,7 +2,7 @@
   "meta": {
     "name": "Awesome Agent Skills 中文导航",
     "description": "精选真实可用的 Agent Skills、技能合集与规范资源，中文解读、按场景分类、附安装方式",
-    "updated": "2026-10-28"
+    "updated": "2026-10-31"
   },
   "categories": [
     { "id": "document", "name": "文档处理", "icon": "📄" },
@@ -433,6 +433,18 @@
       "install": "复制 examples/pyramid-principle 到对应 Agent 的 skills 目录",
       "description": "书灵的完整示例顾问，用《金字塔原理》的方法论帮助改汇报、搭结构和提炼结论。",
       "featured": true
+    },
+    {
+      "name": "agent-qa",
+      "url": "https://vostride.com/docs/agent-qa/coding-agents",
+      "category": "dev",
+      "source": "official",
+      "type": "collection",
+      "license": "FSL-1.1-ALv2",
+      "compatibility": "Claude Code / Codex（需已安装 agent-qa、配置项目和 MCP）",
+      "install": "mkdir -p .agents/skills && cp -R node_modules/agent-qa/skills/agent-qa-* .agents/skills/",
+      "description": "vostride 官方四项技能，涵盖 Web、Android 和 iOS 测试编写、失败分诊、修复及高级 memidex 记忆检查，支持经验证的自我改进。会读写测试文件、操作目标应用并调用模型，可能产生费用；仅用于获授权的测试环境。",
+      "featured": false
     }
   ]
 }
